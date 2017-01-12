@@ -46,7 +46,7 @@ func New(next http.Handler) http.Handler {
 		_, offset := starttime.Zone()
 		offsetHours := int(offset / 3600)
 		offsetMinutes := offset - (offsetHours * 3600)
-		timestamp := fmt.Sprintf("%02v/%v/%v:%v:%v:%v +%02v%02v",
+		timestamp := fmt.Sprintf("%02v/%v/%v:%02v:%02v:%02v +%02v%02v",
 			starttime.Day(), starttime.Month().String()[0:3], starttime.Year(),
 			starttime.Hour(), starttime.Minute(), starttime.Second(),
 			offsetHours, offsetMinutes)
