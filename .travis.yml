@@ -1,8 +1,8 @@
 language: go
 
 go:
-- release
-- tip
+  - stable
+  - tip
 
 script:
-- go test -v ./...
+  - go test -v ./...
